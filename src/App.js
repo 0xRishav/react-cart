@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
         products : [
         {
-            title: 'Mobile Phone',
+            title: 'iPhone',
             price: 8999,
             qty: 1,
             image: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
