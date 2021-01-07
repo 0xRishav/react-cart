@@ -1,15 +1,7 @@
 import React from 'react';
 
 class CartItem extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            title: 'Mobile Phone',
-            price: 8999,
-            qty: 1,
-            image: ''
-        }
-    }
+
 
 
 // SET STATE FUNTION 
@@ -51,9 +43,9 @@ class CartItem extends React.Component{
             }
         })
     }
-    
+
     render(){
-        const { title, price, qty, image } = this.state;
+        const { title, price, qty, image, id } = this.props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
@@ -68,17 +60,21 @@ class CartItem extends React.Component{
                         src="https://www.flaticon.com/svg/static/icons/svg/992/992651.svg" 
                         alt="increase" 
                         className="action-icons"
-                        onClick={this.increaseQty}/>
+                        onClick={()=>{this.props.onIncreaseQuantity(this.props.product)}}
+                        />
                         <img 
                         src="https://www.flaticon.com/svg/static/icons/svg/992/992683.svg" 
                         alt="decrease" 
                         className="action-icons"
-                        onClick={this.decreaseQty}
+                        onClick={()=>{this.props.onDecreaseQuantity(this.props.product)}}
                         />
                         <img 
                         src="https://www.flaticon.com/svg/static/icons/svg/1345/1345874.svg" 
                         alt="delete" 
-                        className="action-icons"/>
+                        className="action-icons"
+                        onClick={()=>{this.props.onDelete(this.props.product.id)}}
+                        />
+                        
                     </div>
                 </div>
             </div>
