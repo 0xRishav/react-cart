@@ -29,7 +29,7 @@ class CartItem extends React.Component{
         return(
             <div className="cart-item">
                 <div className="left-block">
-                    <img style={styles.image} src="" alt=""/>
+                    <img style={styles.image} src={image} alt=""/>
                 </div>
                 <div className="right-block">
                     <div style={{fontSize:25}}>{title}</div>
@@ -65,8 +65,8 @@ class CartItem extends React.Component{
 
 const styles = {
     image: {
-        height: 110,
-        width: 110,
+        height: 167,
+        width: 111,
         borderRadius: 6,
         background: '#ccc',
         outline: 'none'
