@@ -51,6 +51,7 @@ class CartItem extends React.Component{
             }
         })
     }
+    
     render(){
         const { title, price, qty, image } = this.state;
         return(
