@@ -23,27 +23,6 @@ class CartItem extends React.Component{
 
 
 
-
-    increaseQty =()=> {
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty += 1
-            }
-        })
-    }
-    
-    decreaseQty=()=>{
-        const {qty} = this.state;
-        if(qty===0){
-            return;
-        }
-        this.setState((prevState)=>{
-            return{
-                qty: prevState.qty-=1
-            }
-        })
-    }
-
     render(){
         const { title, price, qty, image, id } = this.props.product;
         return(
